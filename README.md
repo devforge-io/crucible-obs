@@ -6,14 +6,26 @@ This repository hosts the plugin's releases. Downloads are on the [Releases](htt
 
 ## Requirements
 
-- OBS Studio 32 on macOS 12 or later (Apple Silicon or Intel). A Windows build is planned.
+- OBS Studio 32 on Windows 10 or 11 (x64), from v0.5.0, or on macOS 12 or later (Apple Silicon or Intel).
 - A Crucible server: see [devforge-io/crucible](https://github.com/devforge-io/crucible).
 
 ## Install
 
+### Windows
+
+1. Quit OBS.
+2. Download `crucible-obs-<version>-windows-x64-installer.exe` from the latest release and run it. It installs into `C:\ProgramData\obs-studio\plugins\crucible-obs`.
+
+   Without the installer: download `crucible-obs-<version>-windows-x64.zip`, unzip it, and copy its `crucible-obs` folder into `C:\ProgramData\obs-studio\plugins\`.
+3. Start OBS. Setup is under **Tools → Crucible**, status under **Docks → Crucible**.
+
+If a release says it isn't signed, Windows SmartScreen may warn about the installer: choose **More info → Run anyway**.
+
+### macOS
+
 1. Quit OBS.
 2. Download `crucible-obs-<version>-macos-universal.zip` from the latest release and unzip it.
-3. Move `crucible-obs.plugin` into `~/Library/Application Support/obs-studio/plugins/`.
+3. Move `crucible-obs.plugin` from the unzipped `crucible-obs` folder into `~/Library/Application Support/obs-studio/plugins/`.
 4. Start OBS. Setup is under **Tools → Crucible**, status under **Docks → Crucible**.
 
 If a release says it isn't signed and OBS doesn't load it, run:
@@ -31,7 +43,10 @@ xattr -dr com.apple.quarantine ~/Library/Application\ Support/obs-studio/plugins
 
 ## Uninstall
 
-Quit OBS and delete `crucible-obs.plugin` from the plugins folder.
+Quit OBS, then:
+
+- **Windows:** uninstall **Crucible OBS plugin** from **Settings → Apps**, or delete `C:\ProgramData\obs-studio\plugins\crucible-obs`.
+- **macOS:** delete `crucible-obs.plugin` from the plugins folder.
 
 ## Licence
 

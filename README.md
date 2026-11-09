@@ -35,4 +35,6 @@ Quit OBS and delete `crucible-obs.plugin` from the plugins folder.
 
 ## Licence
 
-GPL-2.0-or-later.
+Copyright (C) 2026 Devforge Pty Ltd.
+
+Licensed under the GNU General Public License, version 2 or (at your option) any later version: see [LICENSE](LICENSE).
